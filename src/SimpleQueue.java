@@ -1,7 +1,7 @@
 import java.util.ArrayList;
 
 public class SimpleQueue<T> implements Queue<T> {
-    private ArrayList<T> arrayList = new ArrayList<>();
+    private final ArrayList<T> arrayList = new ArrayList<>();
 
     @Override
     public void add(T item) {
@@ -9,8 +9,8 @@ public class SimpleQueue<T> implements Queue<T> {
     }
 
     @Override
-    public T remove() {
-        return arrayList.remove(0);
+    public void remove() {
+        arrayList.remove(0);
     }
 
     @Override
